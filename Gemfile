@@ -32,6 +32,7 @@ group :test do
   gem 'chromedriver-helper'
   gem 'simplecov', require: false
   gem 'simplecov-console', require: false
+  gem 'guard-rspec', require: false
 
 end
 
