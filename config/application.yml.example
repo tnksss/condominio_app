@@ -3,11 +3,18 @@ database: &database
   db.password: your-password
   db.host: localhost
 
+mailer: &mailer
+  mailer.host: localhost
+  mailer.port: '3000'
+
 development:
+  <<: *mailer
   <<: *database
 
 test:
+  <<: *mailer
   <<: *database
+  browser.headless: 'true'
 
 production:
   <<: *database
