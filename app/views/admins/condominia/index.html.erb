@@ -1,0 +1,60 @@
+<% provide(:page_title, 'Condominia') %>
+
+
+
+<div class=" text-right">
+  <%= link_to  new_admins_condominium_path, 
+              class: 'btn btn-secondary', 
+              title: ' Novo Condomínio', 
+              data:{ toggle: 'tooltip', placement: 'top'} do%>
+    <i class="fas fa-plus"></i>
+  <% end %>
+</div>
+
+<div class="table-responsive">
+  <table class="table table-data card-table table-vcenter text-nowrap">
+    <thead>
+      <tr>
+        <th><%= I18n.t('activerecord.attributes.condominium.name') %></th>
+        <th>Criado em: </th>
+        <th></th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <% @condominia.each do |condominia| %>
+        <tr>
+          <td><%= condominia.name %></td>
+          <td><%= condominia.email %></td>
+          <td><%= l(condominia.created_at, format: :long) %></td>
+
+          <td>
+          <%= link_to admins_condominium_path(condominia) do%>
+            <span class="icon mr-3"><i class="fas fa-folder-open" 
+            data-toggle="tooltip" data-placement="top" title="Visualizar"></i></span>
+          <% end %>
+
+          <%= link_to edit_admins_condominium_path(condominia) do%>
+            <span class="icon mr-3"><i class="fas fa-edit"
+            data-toggle="tooltip" data-placement="top" title="Editar"></i></span>
+          <% end %>
+
+          <%= link_to [:admins, condominia], method: :delete, data: { confirm: t('prompt.confirm')} do%>
+            <span class="icon mr-3"><i class="fas fa-trash-alt"
+            data-toggle="tooltip" data-placement="top" title="Remover"></i></span>
+          <% end %>
+          </td>
+          
+          
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>
+<br   >
+
+<div class="ui right floated pagination menu ">
+ 
+</div>
+
+

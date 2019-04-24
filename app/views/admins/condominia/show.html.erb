@@ -1,0 +1,29 @@
+<p>
+  <strong>Name:</strong>
+  <%= @condominium.name %>
+</p>
+<p>
+  <strong>Address:</strong>
+  <%= @condominium.address %>
+</p>
+<p>
+  <strong>Number:</strong>
+  <%= @condominium.number %>
+</p>
+<p>
+  <strong>Phone:</strong>
+  <%= @condominium.phone %>
+</p>
+<p>
+  <strong>Email:</strong>
+  <%= @condominium.name %>
+</p>
+
+<p>
+  <strong>Created_at:</strong>
+  <%= @condominium.created_at %>
+</p>
+
+ <div class="d-flex">
+    <%= link_to "Voltar", admins_condominia_path, class: 'btn btn-secondary' , title: 'Voltar para lista de Condomínios' %>
+  </div>
