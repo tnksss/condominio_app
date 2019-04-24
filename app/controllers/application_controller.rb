@@ -8,7 +8,7 @@ class ApplicationController < ActionController::Base
   def layout_by_resource
     case namespace_name
     when 'devise'
-      'devise/layouts/application'
+      'layouts/devise/session'
     else
       'layouts/application'
     end
