@@ -1,11 +1,12 @@
-<% provide(:page_title, 'Condominia') %>
+<% provide(:page_title, t('activerecord.models.condominium.index')) %>
+<% provide(:head_title, t('activerecord.models.condominium.index')) %>
 
 
 
 <div class=" text-right">
   <%= link_to  new_admins_condominium_path, 
               class: 'btn btn-secondary', 
-              title: ' Novo Condomínio', 
+              title: t('hints.condominium.new'), 
               data:{ toggle: 'tooltip', placement: 'top'} do%>
     <i class="fas fa-plus"></i>
   <% end %>
@@ -15,33 +16,33 @@
   <table class="table table-data card-table table-vcenter text-nowrap">
     <thead>
       <tr>
-        <th><%= I18n.t('activerecord.attributes.condominium.name') %></th>
-        <th>Criado em: </th>
+        <th><%= t('activerecord.attributes.condominium.name') %></th>
+        <th><%= t('activerecord.attributes.condominium.created_at')%> </th>
         <th></th>
       </tr>
     </thead>
 
     <tbody>
-      <% @condominia.each do |condominia| %>
+      <% @condominia.each do |condominium| %>
         <tr>
-          <td><%= condominia.name %></td>
-          <td><%= condominia.email %></td>
-          <td><%= l(condominia.created_at, format: :long) %></td>
+          <td><%= condominium.name %></td>
+          <td><%= condominium.email %></td>
+          <td><%= l(condominium.created_at, format: :long) %></td>
 
           <td>
-          <%= link_to admins_condominium_path(condominia) do%>
+          <%= link_to admins_condominium_path(condominium) do%>
             <span class="icon mr-3"><i class="fas fa-folder-open" 
-            data-toggle="tooltip" data-placement="top" title="Visualizar"></i></span>
+            data-toggle="tooltip" data-placement="top" title=<%= t('hints.condominium.show')%>></i></span>
           <% end %>
 
-          <%= link_to edit_admins_condominium_path(condominia) do%>
+          <%= link_to edit_admins_condominium_path(condominium) do%>
             <span class="icon mr-3"><i class="fas fa-edit"
-            data-toggle="tooltip" data-placement="top" title="Editar"></i></span>
+            data-toggle="tooltip" data-placement="top" title= <%= t('hints.condominium.edit')%>> </i></span>
           <% end %>
 
-          <%= link_to [:admins, condominia], method: :delete, data: { confirm: t('prompt.confirm')} do%>
+          <%= link_to [:admins, condominium], method: :delete, data: { confirm: t('prompt.confirm')} do%>
             <span class="icon mr-3"><i class="fas fa-trash-alt"
-            data-toggle="tooltip" data-placement="top" title="Remover"></i></span>
+            data-toggle="tooltip" data-placement="top" title=<%= t('hints.condominium.remove')%>></i></span>
           <% end %>
           </td>
           

@@ -1,29 +1,29 @@
 <p>
-  <strong>Name:</strong>
+  <strong><%= t('activerecord.attributes.condominium.name')%>:</strong>
   <%= @condominium.name %>
 </p>
 <p>
-  <strong>Address:</strong>
+  <strong><%= t('activerecord.attributes.condominium.address')%>:</strong>
   <%= @condominium.address %>
 </p>
 <p>
-  <strong>Number:</strong>
+  <strong><%= t('activerecord.attributes.condominium.number')%>:</strong>
   <%= @condominium.number %>
 </p>
 <p>
-  <strong>Phone:</strong>
+  <strong><%= t('activerecord.attributes.condominium.phone')%>:</strong>
   <%= @condominium.phone %>
 </p>
 <p>
-  <strong>Email:</strong>
-  <%= @condominium.name %>
+  <strong><%= t('activerecord.attributes.condominium.email')%>:</strong>
+  <%= @condominium.email %>
 </p>
 
 <p>
-  <strong>Created_at:</strong>
+  <strong><%= t('activerecord.attributes.condominium.created_at')%>:</strong>
   <%= @condominium.created_at %>
 </p>
 
  <div class="d-flex">
-    <%= link_to "Voltar", admins_condominia_path, class: 'btn btn-secondary' , title: 'Voltar para lista de Condomínios' %>
+    <%= link_to t('helpers.back'), admins_condominia_path, class: 'btn btn-secondary' , title: t('hints.condominium.back_hint') %>
   </div>

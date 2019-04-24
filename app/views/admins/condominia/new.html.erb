@@ -1,9 +1,5 @@
-<div class="box box-success">
-  <div class="container">
-    <div class="box-header">
-      <h1>Novo Condomínio</h1>
-    </div>
-    <%= render 'form' %>
-    <br>
-  </div>
-</div>
+<% provide(:page_title, t('activerecord.models.condominium.new')) %>
+<% provide(:head_title, t('activerecord.models.condominium.new')) %>
+
+<%= render 'form' %>
+  
