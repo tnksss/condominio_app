@@ -1,0 +1,17 @@
+<%= simple_form_for [:admins, @condominium] do |f| %>
+
+    <%= f.input :name, autofocus: true %>
+    <%= f.input :address %>
+    <%= f.input :number %>
+    <%= f.input :phone %>
+    <%= f.input :email %>
+ 
+
+  <div class="card-footer text-right">
+    <div class="d-flex">
+      <%= link_to "Voltar", admins_condominia_path, class: 'btn btn-secondary', title:'Voltar'%>
+      <%= f.button :submit, class: 'btn btn-primary ml-auto', title: 'Cadastrar/Atualizar'%>
+    </div>
+  </div>
+
+<% end %>

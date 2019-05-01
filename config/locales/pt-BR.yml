@@ -7,6 +7,12 @@ pt-BR:
       admin:
         one: Administrador
         other: Administradores
+      condominium:
+        one: Condomínio
+        other: Condomínios
+        index: Condomínios
+        new: Novo Condomínio
+        edit: Editar Condomínio
     attributes:
       attribute_commons: &commons
         name: Nome
@@ -18,6 +24,11 @@ pt-BR:
         current_password: Senha atual
         password_confirmation: Confirmação de senha
         remember_me: Lembre-me
+        <<: *commons
+      condominium:
+        address: Endereço
+        number: Número
+        phone: Telefone
         <<: *commons
   helpers:
     back: Voltar
@@ -64,3 +75,10 @@ pt-BR:
     select:
       m: Selecione um %{name}
       f: Selecione uma %{name}
+  hints:
+    condominium:
+      new: Novo Condomínio
+      edit: Editar
+      show: Visualizar
+      remove: Remover
+      back_hint: Voltar para lista de condomínios.
