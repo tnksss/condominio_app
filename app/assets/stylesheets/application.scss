@@ -2,7 +2,7 @@
 * Gems
 **************************************************************/
 @import "font-awesome-sprockets";
-@import "font-awesome";
+@import "customizations/fontawesome";
 @import "bootstrap";
 
 /*************************************************************
@@ -21,6 +21,7 @@
 **************************************************************/
 @import "customizations/simple_form_bootstrap";
 @import "customizations/creative_costumizations";
+@import "customizations/global";
 
 
 
