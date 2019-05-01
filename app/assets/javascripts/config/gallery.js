@@ -3,10 +3,10 @@
 "use strict";
 
 $(document).on('turbolinks:load', function () {
-  TSICMS.gallery();
+    CondominioApp.gallery();
 });
 
-TSICMS.gallery = function () {
+CondominioApp.gallery = function () {
   $('.popup-gallery').magnificPopup({
     delegate: 'a',
     type: 'image',

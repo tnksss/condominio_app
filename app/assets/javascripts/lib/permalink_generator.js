@@ -1,4 +1,4 @@
-TSICMS.PermalinkGenerator = class {
+CondominioApp.PermalinkGenerator = class {
    static generateSlug(string) {
       return this.normalizeCharacters(string)
       .replace(/\s/gi, '-')

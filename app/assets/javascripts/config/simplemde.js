@@ -4,7 +4,7 @@ $(document).on('turbolinks:load', function() {
   
 });
 
-TSICMS.loadMarkdownEditor = function () {
+CondominioApp.loadMarkdownEditor = function () {
    $('.markdown-editor').each(function () {
       var id = $(this).attr('id');
       new SimpleMDE({ element: document.getElementById(id) });

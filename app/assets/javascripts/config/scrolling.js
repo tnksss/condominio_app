@@ -4,14 +4,14 @@
 "use strict";
 
 $(document).on('turbolinks:load', function () {
-  TSICMS.scrolling.smooth();
-  TSICMS.scrolling.closeResponsiveMenuAfterClick();
-  TSICMS.scrolling.reveals();
+    CondominioApp.scrolling.smooth();
+    CondominioApp.scrolling.closeResponsiveMenuAfterClick();
+    CondominioApp.scrolling.reveals();
 });
 
-TSICMS.scrolling = {};
+CondominioApp.scrolling = {};
 
-TSICMS.scrolling.smooth = function () {
+CondominioApp.scrolling.smooth = function () {
   // Smooth scrolling using jQuery easing
   var scroll_trigger_path = 'a.js-scroll-trigger[href*="#"]:not([href="#"])'
 
@@ -40,14 +40,14 @@ TSICMS.scrolling.smooth = function () {
   });
 }
 
-TSICMS.scrolling.closeResponsiveMenuAfterClick = function () {
+CondominioApp.scrolling.closeResponsiveMenuAfterClick = function () {
   // Closes responsive menu when a scroll trigger link is clicked
   $('.js-scroll-trigger').click(function () {
     $('.navbar-collapse').collapse('hide');
   });
 }
 
-TSICMS.scrolling.reveals = function () {
+CondominioApp.scrolling.reveals = function () {
   // Scroll reveal calls
   window.sr = ScrollReveal();
 

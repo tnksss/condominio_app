@@ -1,10 +1,10 @@
 "use strict";
 
 $(document).on('turbolinks:load', function () {
-  TSICMS.navBarCollapse();
+    CondominioApp.navBarCollapse();
 });
 
-TSICMS.navBarCollapse = function () {
+CondominioApp.navBarCollapse = function () {
   var navbarCollapse = function () {
     if ($("#mainNav").offset().top > 100) {
       $("#mainNav").addClass("navbar-shrink");

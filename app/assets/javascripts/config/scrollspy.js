@@ -1,10 +1,10 @@
 "use strict";
 
 $(document).on('turbolinks:load', function () {
-  TSICMS.scrollspy();
+    CondominioApp.scrollspy();
 });
 
-TSICMS.scrollspy = function () {
+CondominioApp.scrollspy = function () {
   $('body').scrollspy({
     target: '#mainNav',
     offset: 57

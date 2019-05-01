@@ -1,4 +1,4 @@
-TSICMS.imagePreview = (el) ->
+CondominioApp.imagePreview = (el) ->
   readURL = (input)->
     if input.files && input.files[0]
       reader = new FileReader()
